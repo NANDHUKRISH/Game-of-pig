@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Game of Pig Rules</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+            integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="styles.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <div id="myName">
+                 <h2>NandhuKrishna M A</h2>
+                 <h4>MERN stack Developer</h4>
+                 <p>TVPM , Kerala</p>
+                 </div>
+            <div id="gameName">
+                <h1 class="font-effect-shadow-multiple"><img id="headerimg" src=".//image/favicon.png"> Game of PIG</h1>
+            </div>
+        </header>
+       
+    <div class="main-section" >
+        <article>
+            <h2>Instructions</h2>
+            <p>
+                The game of Pig is a very simple jeopardy dice game in which two players race to reach 50 points. Each turn, a
+                player repeatedly rolls a die until either a 1 is rolled or the player holds and scores the sum of the rolls
+                (i.e. the turn total). At any time during a player's turn, the player is faced with two decisions:</p>
+               <p> 
+                <ol>
+                    <li><b>ROLL DICE</b> -If the player rolls a</li>
+                         <ul>
+                            <li><b>1</b>: the player scores nothing and it becomes the opponent's turn. </li>
+                            <li><b>2 - 6</b>: the number is added to the player's Current total and the player's turn continues. </li>
+                    </ul>
+                    <li><b>HOLD</b>  - The current total is added to the player's score
+                        and it becomes the opponent's turn.</li>
+                </ol>
+            </p>
+                <p>
+                There are two players . The violet box indicates the current
+                player. Who First scores 50 points will win .
+            </p>
+
+            <h4 class="highlight">"Once a Player has won , He will be highlighted as winner and then Press the Button "NEW GAME" to start a New Game "</h4>
+        </article>
+    <main>
+        <section class="player player--0 player--active">
+            <h2 class="name" id="name--0">Player 1</h2>
+            <p class="score" id="score_0">43</p>
+            <p  class="winner">🎊🎉 Winner 🎉🎊</p>
+            <div class="current">
+              <p class="current-label">Current</p>
+              <p class="current-score" id="current--0">0</p>
+            </div>
+          </section>
+          <section class="player player--1">
+            <h2 class="name" id="name--1">Player 2</h2>
+            <p class="score" id="score_1">24</p>
+            <p class="winner">🎊🎉 Winner 🎉🎊</p>
+            <div class="current">
+              <p class="current-label">Current</p>
+              <p class="current-score" id="current--1">0</p>
+            </div>
+          </section>
+      
+          <img src=".//image/dice-1.png" alt="Playing dice" class="dice" />
+          <button class="btn btn--new">🔄 New game 🔄</button>
+          <button class="btn btn--roll">🎲 Roll dice </button>
+          <button class="btn btn--hold"> Hold </button>
+
+    </main>
+</div>
+
+    </body>
+</html>

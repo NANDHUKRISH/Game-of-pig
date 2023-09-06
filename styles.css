@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple");
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html
+{
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Lalezar', sans-serif;
+  color: #333;
+  background: #e0e2f1;
+}
+
+/* HEader */
+#headerimg{
+  width:60px;
+  height:40px;
+}
+header{
+ display: flex;
+ justify-content:space-between;
+ padding:20px;
+}
+#gameName{
+    width:60%vw;
+    margin:auto;
+    font-size: 22px;
+    color:rgb(77, 15, 158);
+}
+
+#myName{
+    width:40%vw;
+    margin-left:120px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    color:#511631;
+    font-size: 14px;
+}
+
+/* Instruction */
+article{
+    padding:20px;
+    margin:20px 50px;
+    background: #d6d6d4;
+    font-size: 15px;
+    line-height: 20px;
+    color:black;
+}
+article h2{
+    margin: 10px auto ;
+    font-size:20px;
+    color:#c32785;
+    padding-bottom: 5px;
+}
+article ol{
+    padding:10px;
+}
+article ol ul{
+    margin-left:15px;
+}
+/* LAYOUT */
+.main-section{
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.main-section article{
+  position: absolute;
+  left:10px;
+  width: 40rem;
+  height: 54rem;
+  background: #a3f1ba;
+  border-radius: 10px;
+}
+main {
+  position: absolute;
+  right:100px;
+  width: 90rem;
+  height: 54rem;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  overflow: hidden;
+  display: flex;
+}
+
+.player
+{
+  flex: 50%;
+  padding: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.75s;
+}
+
+/* ELEMENTS */
+.name
+{
+  position: relative;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.score
+{
+  font-size: 8rem;
+  font-weight: 300;
+  color: #c7365f;
+  margin-bottom: auto;
+}
+
+.player--active
+{
+  background-color: rgba(197, 66, 237, 0.2);
+}
+.player--active .name
+{
+  font-weight: 800;
+}
+.player--active .score
+{
+  font-weight: 300;
+  color:rgb(139, 62, 181);
+}
+
+.player--active .current
+{
+  opacity: 1;
+  background-color: rgb(139, 62, 181);
+}
+
+.current
+{
+  background-color: #c7365f;
+  opacity: 0.7;
+  border-radius: 25px;
+  color: #fff;
+  width: 65%;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.75s;
+}
+
+.current-label
+{
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  color: #f1f1f1;
+}
+
+.current-score
+{
+  font-size: 3.5rem;
+}
+
+/* ABSOLUTE POSITIONED ELEMENTS */
+
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #444;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+
+  background-color: white;
+  background-color: rgba(252, 253, 253, 0.2);
+  backdrop-filter: blur(10px);
+
+  padding: 1.2rem 2.5rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+.btn--new {
+  top: 2rem;
+}
+.btn--roll {
+  top: 34rem;
+}
+.btn--hold {
+  top: 42rem;
+}
+
+.btn:active {
+  transform: translate(-50%, 3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.dice {
+  position: absolute;
+  left: 50%;
+  top: 16.5rem;
+  transform: translateX(-50%);
+  height: 10rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+
+.player--winner {
+  background: rgb(255,199,170);
+  background: linear-gradient(90deg, rgba(255,199,170,0.9202279202279202) 9%, rgba(237,71,222,0.9829059829059829) 91%);
+}
+
+.player--winner .name {
+  font-weight: 700;
+  color: #c7365f;
+}
+
+.hidden {
+  display: none;
+}
+
+.winner{
+  position: absolute;
+  bottom: 250px;
+  font-size: 3rem;
+  font-weight: 700;
+  opacity:0;
+}
+
+.player--winner .winner{
+  opacity:1;
+}
+.highlight{
+  margin: 25px auto;
+  color:#e4495e;
+  font-size: 1.5rem;
+}
