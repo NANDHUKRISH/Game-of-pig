@@ -28,24 +28,13 @@ body {
 header{
  display: flex;
  justify-content:space-between;
- padding:20px;
+ align-items: center;
+ height:100px;
 }
 #gameName{
-    width:60%vw;
     margin:auto;
     font-size: 22px;
     color:rgb(77, 15, 158);
-}
-
-#myName{
-    width:40%vw;
-    margin-left:120px;
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    justify-content: center;
-    color:#511631;
-    font-size: 14px;
 }
 
 /* Instruction */
@@ -56,12 +45,19 @@ article{
     font-size: 15px;
     line-height: 20px;
     color:black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.articlecontent{
+  padding:auto 50px;
 }
 article h2{
     margin: 10px auto ;
     font-size:20px;
     color:#c32785;
     padding-bottom: 5px;
+    text-align: center;
 }
 article ol{
     padding:10px;
@@ -75,20 +71,18 @@ article ol ul{
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  padding: 20px;
+  margin: 10px auto;
 }
 .main-section article{
-  position: absolute;
-  left:10px;
-  width: 40rem;
-  height: 54rem;
+  width: 25%;
+  height: 80vh;
   background: #a3f1ba;
   border-radius: 10px;
 }
 main {
-  position: absolute;
-  right:100px;
-  width: 90rem;
-  height: 54rem;
+  width: 65%;
+  height: 80vh;
   background-color: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(200px);
   filter: blur();
@@ -242,7 +236,7 @@ main {
 
 .winner{
   position: absolute;
-  bottom: 250px;
+  bottom: 50%;
   font-size: 3rem;
   font-weight: 700;
   opacity:0;
@@ -255,4 +249,172 @@ main {
   margin: 25px auto;
   color:#e4495e;
   font-size: 1.5rem;
+}
+
+@media (max-width: 1400px){
+  .main-section article{
+    width: 30%;
+  }
+  main {
+    width: 62%;
+  }
+  .name
+{
+  font-size: 3rem;
+}
+
+.score
+{
+  font-size: 6rem;
+  margin-top:20px;
+}
+.current-score
+{
+  font-size: 3rem;
+}
+
+.btn {
+  font-size: 2rem;
+  font-weight: 600;
+}
+}
+@media (max-width: 1300px){
+  .main-section article{
+    width: 35%;
+  }
+  main {
+    width: 60%;
+  }
+.btn {
+  padding: 1rem 2rem;
+}
+}
+
+@media (max-width: 1170px){
+  header{
+    height:80px;
+   }
+   #gameName{
+       text-align: center;
+       font-size: 20px;
+   }
+  .main-section{
+    flex-direction: column;
+    height:auto;
+    margin:0 auto 20px auto;
+  }
+  .main-section article{
+    width: 70%;
+    height:auto;
+    margin:0 auto 50px auto;
+  }
+  main {
+    width: 90%;
+  }
+  .btn {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+}
+@media (max-width:850px){
+  main {
+    height: 70vh;
+    width:90%;
+  }
+  .name
+{
+  font-size: 2rem;
+}
+.score
+{
+  font-size: 4rem;
+  margin-top:20px;
+}
+.current
+{
+  padding: 2rem;
+}
+.current-score
+{
+  font-size: 2rem;
+}
+.current-label{
+  font-size: 1.2rem;
+}
+.dice {
+  height: 6rem;
+}
+.btn {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.btn--new {
+  top: 2rem;
+}
+.btn--roll {
+  top: 28rem;
+}
+.btn--hold {
+  top: 35rem;
+}
+.winner{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+}
+@media (max-width:700px){
+  main {
+    height: 65vh;
+    width:95%;
+  }
+  .name
+{
+  font-size: 1.5rem;
+}
+.dice {
+  height: 5rem;
+}
+.score
+{
+  font-size: 3rem;
+  margin-top:20px;
+}
+.current
+{ 
+  padding: 1.5rem;
+}
+.current-score
+{
+  font-size: 2rem;
+}
+.current-label{
+  font-size: 1rem;
+}
+.btn {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.btn--roll {
+  top: 26rem;
+}
+.btn--hold {
+  top: 32rem;
+}
+.winner{
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+}
+@media (max-width:600px){
+  main {
+    height: 60vh;
+    width:98%;
+  }
+  .current-label{
+    display: none;
+  }
+  .name
+  { 
+    font-size: 1.2rem;
+  }
 }
